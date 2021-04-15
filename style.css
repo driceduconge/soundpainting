@@ -91,6 +91,10 @@ details{
   font-size: 3vh;
   transition: background-color 700ms;
 }
+a{
+  text-decoration:none;
+  color:inherit;
+}
 summary::marker {
   content: "";
 }
@@ -111,4 +115,3 @@ details {
 }
 details:not([open]) { height: 4vh; }
 details[open] { height: 14vh; }ep 3s ease-in-out;
-}

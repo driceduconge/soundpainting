@@ -1,5 +1,9 @@
+:root{
+  --vert:#0FA17E;
+  --rose:#db97ae;
+}
 html {
-  background-color: #db97ae;
+  background-color: var(--rose);
   -webkit-touch-callout: none;
   /* iOS Safari */
   -webkit-user-select: none;
@@ -14,7 +18,10 @@ html {
   /* Non-prefixed version, currently
      supported by Chrome, Edge, Opera and Firefox */
   overflow: auto;
-  color: #0FA17E;
+  color: var(--vert);
+  animation-name: bgrtog,colgtor;
+  animation-duration: 60s;
+    animation-iteration-count: infinite;
 }
 
 body {
@@ -56,8 +63,8 @@ h1 a{
 
 h1 a:hover {
   cursor: pointer;
-  -webkit-text-stroke: 1px #0FA17E;
-  color: #db97ae;
+  -webkit-text-stroke: 1px black;
+  color: transparent;
 }
 
 .hm {
@@ -91,7 +98,7 @@ p i{
 }
 .esp {
   font-family: "Ortica";
-  transition: none;
+  transition: -webkit-text-stroke 1s, color 1s;
 }
 
 .arch2 {
@@ -101,8 +108,10 @@ p i{
 
 .arch2:hover {
   -webkit-text-stroke: 0px;
-  color: #0FA17E;
+  color: var(--vert);
   cursor: default;
+  animation-name: colgtor;
+  animation-duration: 2s;
 }
 
 i {
@@ -127,8 +136,8 @@ summary::marker {
 }
 
 summary:hover {
-  color: #db97ae;
-  background-color: #0FA17E;
+  color: var(--rose);
+  background-color: var(--vert);
   cursor: pointer;
 }
 .cool{
@@ -151,8 +160,8 @@ summary {
 }
 
 details[open] {
-  color: #db97ae;
-  background-color: #0FA17E;
+  color: var(--rose);
+  background-color: var(--vert);
 }
 .cont{
   display: flex;
@@ -219,22 +228,70 @@ details[open] { height: 29vh; }
 .prepart{
   margin-left: -3px;
   overflow-x: auto;
-  background-color: #db97ae;
+  background-color: var(--rose);
   overflow-y: hidden;
   height:15vh;
   scrollbar-width:none;
+  animation-name: bgrtog;
+  animation-duration: 2s;
 }
 .prepart::-webkit-scrollbar{
   width: 0px;
 
 }
+@keyframes colrtog{
+  0%{
+    color:var(--rose);
+  }
+  50%{
+    color:var(--vert);
+  }
+  100%{
+    color:var(--rose);
+  }
+}
+@keyframes bgrtog{
+  0%{
+    background-color:var(--rose);
+  }
+  50%{
+    background-color:var(--vert);
+  }
+  100%{
+    background-color:var(--rose);
+  }
+}
+@keyframes colgtor{
+  0%{
+    color:var(--vert);
+  }
+  50%{
+    color:var(--rose);
+  }
+  100%{
+    color:var(--vert);
+  }
+}
+@keyframes bggtor{
+  0%{
+    background-color:var(--vert);
+  }
+  50%{
+    background-color:var(--rose);
+  }
+  100%{
+    background-color:color:var(--vert);
+  }
+}
 .partition{
-  color:#0FA17E;
+  color:var(--vert);
   position: relative;
   font-family: "Soundpainting";
   font-size: 15vh;
   width: auto;
   white-space:nowrap;
+  animation-name: colgtor;
+  animation-duration: 2s;
 }
 
 .pratik{
@@ -253,7 +310,7 @@ em{
  font-style: normal;
 }
 img.cool:hover + em{
-  color:#db97ae;
+  color:var(--rose);
 
 }
 img.cool:hover + em::after{

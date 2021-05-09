@@ -310,7 +310,7 @@ em{
  font-style: normal;
 }
 img.cool:hover + em{
-  color:var(--rose);
+  color:transparent;
 
 }
 img.cool:hover + em::after{

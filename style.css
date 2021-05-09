@@ -188,6 +188,24 @@ details:not([open]) {
   height: 4vh;
   padding-bottom: 3px;
 }
-details[open] { height: 14vh; }ep 3s ease-in-out;
+details[open] { height: 29vh; }
 
+.prepart{
+  margin-left: -3px;
+  overflow-x: auto;
+  background-color: black;
+  overflow-y: hidden;
+  height:15vh;
+}
+.prepart::-webkit-scrollbar{
+  width: 0px;
+
+}
+.partition{
+  position: relative;
+  font-family: "Soundpainting";
+  font-size: 15vh;
+  width: auto;
+  white-space:nowrap;
+}
 /*# sourceMappingURL=style.css.map */
